@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 20px;
+            /* 初始高度为0 */
+            overflow: hidden;
+            /* 隐藏溢出内容 */
+            border: 1px solid #000;
+            margin: 0 auto;
+            transition: all 1s ease-in-out;
+            /* 只对高度应用过渡动画 */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        const box = document.querySelector('.box');
+        setTimeout(() => {
+            box.innerHTML = 'Hello World';
+            box.style.height = '200px'; // 将高度设为目标高度，触发过渡效果
+        }, 3000);
+    </script>
+</body>
+
+</html>
